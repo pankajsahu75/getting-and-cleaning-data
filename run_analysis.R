@@ -50,6 +50,6 @@ mn_sd_data <- select(mn_sd_data, -Y)
 
 tidydf <- aggregate(. ~ Activity + subject , mn_sd_data, mean, na.rm = TRUE)
 
-write.table(mn_sd_data, file = paste(dirpath,"tidy_data.txt"), row.names = FALSE)
+write.table(tidydf, file = paste(dirpath,"tidy_data.txt"), row.names = FALSE)
             
 ## end of code
